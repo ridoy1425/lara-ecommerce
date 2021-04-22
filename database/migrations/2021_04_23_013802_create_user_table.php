@@ -19,10 +19,10 @@ class CreateUserTable extends Migration
             $table->string('email',128)->unique();
             $table->string('phone_number',32)->unique();
             $table->string('password',128);
-            $table->bigInteger('reward_points')->default();
+            $table->bigInteger('reward_points')->default(0);
             $table->date('email_varified_at')->nullable();
-            $table->string('email_varification_token',88)->nullable();
-            $table->string('facebook_id',32)->nullble();
+            $table->string('email_varification_token',88)->nullble();
+            $table->string('facebook_id',32)->nullable();
             $table->string('google_id',32)->nullable();
             $table->rememberToken();
             $table->timestamps();
